@@ -5,7 +5,7 @@ st.set_page_config(page_title="Sales Incentive Calculator", page_icon="💎", la
 st.title("Sales Incentive Calculator")
 
 st.sidebar.header("Enter Details")
-tier = st.sidebar.selectbox("Choose Metal", ["Gold", "Silver"])
+metal = st.sidebar.selectbox("Choose Metal", ["Gold", "Silver"])
 
 ar = st.sidebar.number_input("Enter Sales Amount (₹)", min_value=0, value=300000, step=10000)
 
