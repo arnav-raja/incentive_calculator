@@ -25,7 +25,7 @@ def calculate(metal, ar):
         elif a < 1:
             rate = 0.0025           # Flat rate from 95% to 100%
         else:
-            rate = 0.005 + 0.003 * (a - 1)
+            rate = 0.005 + 0.001 * (a - 1)
     return rate, ar * rate
 
 rate, payout = calculate(metal, ar)
