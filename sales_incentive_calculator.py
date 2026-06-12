@@ -17,7 +17,7 @@ def calculate(metal, ar):
         elif a < 1:
             rate = 0.00025          # Flat rate from 95% to 100%
         else:
-            rate = 0.0006 + 0.00015 * (a - 1)
+            rate = 0.0006 + 0.0002 * (a - 1)
     else:
         a = ar / 50000
         if a < 0.95:
