@@ -25,7 +25,7 @@ def calculate(tier, ar):
         elif a < 1:
             rate = 0.0025
         else:
-            rate = 0.005 + 0.003 * (a - 1)
+            rate = 0.0005 + 0.0003 * (a - 1)
     return rate, ar * rate
 
 rate, payout = calculate(tier, ar)
