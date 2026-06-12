@@ -17,7 +17,7 @@ def calculate(tier, ar):
         elif a < 1:
             rate = 0.00025
         else:
-            rate = 0.0006 + 0.00015 * (a - 1)
+            rate = 0.0006 + 0.0002 * (a - 1)
     else:
         a = ar / 10000000
         if a < 0.95:
