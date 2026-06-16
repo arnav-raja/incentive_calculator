@@ -13,7 +13,7 @@ SA_ROSTER = {
     "Radha S": 21200,
     "Ramya B": 20000,
     "Shruti K": 21000,
-    "Sunitha": 24700,
+    "Sunitha S": 24700,
     "Vidya R": 18000,
     "Vignesh K": 33200,
 }
