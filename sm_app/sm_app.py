@@ -3,7 +3,7 @@
 
 import streamlit as st
 from sm_calculator import compute_sm_incentive
-from roster import SM_ROSTER
+from sm_roster import SM_ROSTER
 
 # Page Config
 st.set_page_config(
@@ -167,7 +167,7 @@ st.divider()
 with st.expander("Manage SM Roster"):
     st.markdown("""
         To Add Or Edit Managers And Their Salaries,
-        Open roster.py And Update The SM Roster Dictionary.
+        Open sm_roster.py And Update The SM Roster Dictionary.
 
         Format Each Line As Follows:
         Full Name Followed By A Colon And The Salary Value.
