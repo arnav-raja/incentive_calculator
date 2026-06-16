@@ -2,10 +2,18 @@
 # Add Or Edit Associates Here. Each Name Must Be Unique
 
 SA_ROSTER = {
-    "Alice Fernandes": 25000,
-    "Rajan Mehta":     20000,
-    "Priya Nair":      22000,
-    "Suresh Kumar":    18000,
-    "Deepa Iyer":      30000,
-    "Karthik Pillai":  27500,
+    "Amara M": 22000,
+    "Krishna C": 28000,
+    "Jesintha M": 18000,
+    "Kusuma K": 20000,
+    "Lakshmi N": 26200,
+    "Manjula G": 22000,
+    "Meena S": 20000,
+    "Reetha N": 20000,
+    "Radha S": 21200,
+    "Ramya B": 20000,
+    "Shruti K": 21000,
+    "Sunitha": 24700,
+    "Vidya R": 18000,
+    "Vignesh K": 33200,
 }
