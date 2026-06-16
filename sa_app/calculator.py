@@ -8,7 +8,7 @@ SILVER_MULTIPLIER = 2
 # Fixed Incentive Parameters
 X = 200          # Base Incentive At TR
 CAP_RATE = 0.01  # Max Effective Rate As A Fraction Of AR
-CAP_ATTAINMENT = 10  # Cap Binds At Three Times Target Revenue
+CAP_ATTAINMENT = 3  # Cap Binds At Three Times Target Revenue
 
 
 def get_multiplier(tier):
