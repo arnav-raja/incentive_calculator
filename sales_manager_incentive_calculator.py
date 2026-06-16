@@ -15,7 +15,7 @@ def calculate(ar):
     elif a < 1:
         rate = 0.00025
     else:
-        rate = 0.0006 + 0.0002 * (a - 1)
+        rate = 0.0005 + 0.0003 * (a - 1)
     return rate, ar * rate
 
 rate, payout = calculate(ar)
