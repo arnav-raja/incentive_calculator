@@ -28,4 +28,4 @@ with col1:
 with col2:
     st.metric("Effective Rate", f"{rate*100:.4f}%")
 
-st.success(f"Sales Manager | Monthly Sales: ₹{ar:,}")
+st.success(f"Sales Manager | Monthly Revenue: ₹{ar:,}")
