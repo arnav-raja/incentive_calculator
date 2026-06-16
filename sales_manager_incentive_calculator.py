@@ -4,7 +4,7 @@ st.set_page_config(page_title="Sales Manager Incentive Calculator", page_icon="�
 st.title("Sales Manager Incentive Calculator")
 
 st.sidebar.header("Enter Details")
-ar = st.sidebar.number_input("Enter Monthly Sales (₹)", min_value=0, value=31250000, step=100000)
+ar = st.sidebar.number_input("Enter Monthly Sales Amount (₹)", min_value=0, value=31250000, step=100000)
 
 TR = 31250000
 
@@ -16,6 +16,8 @@ def calculate(ar):
         rate = 0.00025
     else:
         rate = 0.0005 + 0.0003 * (a - 1)
+        
+    rate = min(rate, 0.001)         # Cap effective rate at 0.1%
     return rate, ar * rate
 
 rate, payout = calculate(ar)
