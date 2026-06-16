@@ -1,11 +1,11 @@
 import streamlit as st
 
-st.set_page_config(page_title="Sales Incentive Calculator", page_icon="💎", layout="centered")
-st.title("Sales Incentive Calculator")
+st.set_page_config(page_title="Sales Associate Incentive Calculator", page_icon="💎", layout="centered")
+st.title("Sales Associate Incentive Calculator")
 
 st.sidebar.header("Enter Details")
 metal = st.sidebar.selectbox("Choose Metal", ["Gold", "Silver"])
-ar = st.sidebar.number_input("Enter Sales Amount (₹)", min_value=0, value=300000, step=10000)
+ar = st.sidebar.number_input("Enter Daily Sales Amount (₹)", min_value=0, value=300000, step=10000)
 
 def calculate(metal, ar):
     if metal == "Gold":
