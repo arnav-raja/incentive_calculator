@@ -16,6 +16,7 @@ def calculate(metal, ar):
             rate = 0.00025          # Flat rate from 95% to 100%
         else:
             rate = 0.0005 + 0.0003 * (a - 1)
+        rate = min(rate, 0.001)     # Cap effective rate at 0.1% for Gold
     else:
         a = ar / 50000
         if a < 0.95:
@@ -24,8 +25,7 @@ def calculate(metal, ar):
             rate = 0.0025           # Flat rate from 95% to 100%
         else:
             rate = 0.005 + 0.003 * (a - 1)
-
-    rate = min(rate, 0.01)          # Cap effective rate at 1%
+        rate = min(rate, 0.01)      # Cap effective rate at 1% for Silver
     return rate, ar * rate
 
 rate, payout = calculate(metal, ar)
