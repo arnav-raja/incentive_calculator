@@ -16,7 +16,6 @@ def calculate(ar):
         rate = 0.00025
     else:
         rate = 0.0005 + 0.0003 * (a - 1)
-        
     rate = min(rate, 0.001)         # Cap effective rate at 0.1%
     return rate, ar * rate
 
