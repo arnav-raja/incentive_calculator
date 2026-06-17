@@ -15,7 +15,7 @@ def calculate(ar):
     elif a < 1:
         rate = 0.00025
     else:
-        rate = 0.0005 + 0.0003 * (a - 1)
+        rate = 0.0005 + 0.00025 * (a - 1)
     rate = min(rate, 0.001)
     return rate, ar * rate
 
