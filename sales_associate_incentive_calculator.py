@@ -15,7 +15,7 @@ def calculate(metal, ar):
         elif a < 1:
             rate = 0.00025
         else:
-            rate = 0.0005 + 0.0003 * (a - 1)
+            rate = 0.0005 + 0.00025 * (a - 1)
         rate = min(rate, 0.001)
     else:
         a = ar / 50000
@@ -24,7 +24,7 @@ def calculate(metal, ar):
         elif a < 1:
             rate = 0.0025
         else:
-            rate = 0.005 + 0.003 * (a - 1)
+            rate = 0.005 + 0.0025 * (a - 1)
         rate = min(rate, 0.01)
     return rate, ar * rate
 
