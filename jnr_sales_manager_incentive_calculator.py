@@ -5,19 +5,21 @@ st.title("JNR Sales Manager Incentive Calculator")
 st.sidebar.header("Enter Details")
 
 ar = st.sidebar.number_input("Enter Monthly Sales Amount (₹)", min_value=0, value=40000000, step=100000)
-
 TR = 40000000
 MIN_PAYOUT = 15000
-SLOPE = 0.0005
+SLOPE = 0.00025
+CAP_RATE = 0.001
 
 def calculate(ar, TR):
     a = ar / TR
     if a < 0.95:
         payout = 0.0
     elif a < 1.0:
-        payout = MIN_PAYOUT / 2
+        payout = MIN_PAYOUT * (a - 0.95) / 0.05
     else:
         payout = MIN_PAYOUT + SLOPE * TR * (a - 1)
+    cap = CAP_RATE * ar
+    payout = min(payout, cap)
     effective_rate = payout / ar if ar > 0 else 0
     return effective_rate, payout
 
