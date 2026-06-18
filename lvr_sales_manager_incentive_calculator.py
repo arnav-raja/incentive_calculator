@@ -8,8 +8,7 @@ ar = st.sidebar.number_input("Enter Monthly Sales Amount (₹)", min_value=0, va
 
 TR = 30000000
 MIN_PAYOUT = 15000
-SLOPE = 0.0005
-CAP_RATE = 0.001
+SLOPE = 0.001
 
 def calculate(ar, TR):
     a = ar / TR
@@ -19,8 +18,6 @@ def calculate(ar, TR):
         payout = MIN_PAYOUT / 2
     else:
         payout = MIN_PAYOUT + SLOPE * TR * (a - 1)
-    cap = CAP_RATE * ar
-    payout = min(payout, cap)
     effective_rate = payout / ar if ar > 0 else 0
     return effective_rate, payout
 
