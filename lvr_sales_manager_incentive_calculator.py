@@ -4,9 +4,9 @@ st.set_page_config(page_title="LVR Sales Manager Incentive Calculator", page_ico
 st.title("LVR Sales Manager Incentive Calculator")
 st.sidebar.header("Enter Details")
 
-ar = st.sidebar.number_input("Enter Monthly Sales Amount (₹)", min_value=0, value=25000000, step=100000)
+ar = st.sidebar.number_input("Enter Monthly Sales Amount (₹)", min_value=0, value=30000000, step=100000)
 
-TR = 25000000
+TR = 30000000
 MIN_PAYOUT = 15000
 SLOPE = 0.0005
 CAP_RATE = 0.001
