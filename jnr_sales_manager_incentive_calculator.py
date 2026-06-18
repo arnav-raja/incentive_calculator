@@ -7,7 +7,7 @@ st.sidebar.header("Enter Details")
 ar = st.sidebar.number_input("Enter Monthly Sales Amount (₹)", min_value=0, value=40000000, step=100000)
 TR = 40000000
 MIN_PAYOUT = 15000
-SLOPE = 0.00025
+SLOPE = 0.0005
 CAP_RATE = 0.001
 
 def calculate(ar, TR):
