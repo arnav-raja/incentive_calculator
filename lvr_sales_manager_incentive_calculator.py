@@ -5,9 +5,10 @@ st.title("LVR Sales Manager Incentive Calculator")
 st.sidebar.header("Enter Details")
 
 ar = st.sidebar.number_input("Enter Monthly Sales Amount (₹)", min_value=0, value=25000000, step=100000)
+
 TR = 25000000
 MIN_PAYOUT = 15000
-SLOPE = 0.00025
+SLOPE = 0.0005
 CAP_RATE = 0.001
 
 def calculate(ar, TR):
@@ -15,7 +16,7 @@ def calculate(ar, TR):
     if a < 0.95:
         payout = 0.0
     elif a < 1.0:
-        payout = MIN_PAYOUT * (a - 0.95) / 0.05
+        payout = (SLOPE * TR / 2) * (a - 0.95)
     else:
         payout = MIN_PAYOUT + SLOPE * TR * (a - 1)
     cap = CAP_RATE * ar
