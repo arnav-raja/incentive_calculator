@@ -16,7 +16,7 @@ def calculate(ar, TR):
     if a < 0.95:
         payout = 0.0
     elif a < 1.0:
-        payout = (SLOPE * TR / 2) * (a - 0.95)
+        payout = MIN_PAYOUT / 2
     else:
         payout = MIN_PAYOUT + SLOPE * TR * (a - 1)
     cap = CAP_RATE * ar
