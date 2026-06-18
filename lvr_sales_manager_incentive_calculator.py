@@ -30,9 +30,5 @@ st.subheader("Results")
 col1, col2 = st.columns(2)
 with col1:
     st.metric("Incentive Amount", f"₹ {payout:,.2f}")
-'''
-with col2:
-    st.metric("Effective Rate", f"{rate*100:.4f}%")
-'''
 
 st.success(f"LVR Sales Manager | Monthly Revenue: ₹{ar:,}")
