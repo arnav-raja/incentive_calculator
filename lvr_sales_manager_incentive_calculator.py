@@ -9,13 +9,14 @@ TR = 25000000
 MIN_PAYOUT = 15000
 SLOPE = 0.0005
 CAP_RATE = 0.001
+FLAT_RAMP_PAYOUT = 7500
 
 def calculate(ar, TR):
     a = ar / TR
     if a < 0.95:
         payout = 0.0
     elif a < 1.0:
-        payout = MIN_PAYOUT * (a - 0.95) / 0.05
+        payout = FLAT_RAMP_PAYOUT
     else:
         payout = MIN_PAYOUT + SLOPE * TR * (a - 1)
     cap = CAP_RATE * ar
@@ -29,7 +30,9 @@ st.subheader("Results")
 col1, col2 = st.columns(2)
 with col1:
     st.metric("Incentive Amount", f"₹ {payout:,.2f}")
+'''
 with col2:
     st.metric("Effective Rate", f"{rate*100:.4f}%")
+'''
 
 st.success(f"LVR Sales Manager | Monthly Revenue: ₹{ar:,}")
