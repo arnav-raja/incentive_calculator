@@ -8,7 +8,7 @@ ar = st.sidebar.number_input("Enter Monthly Sales Amount (₹)", min_value=0, va
 
 TR = 40000000
 MIN_PAYOUT = 15000
-SLOPE = 0.001
+SLOPE = 0.0005
 
 def calculate(ar, TR):
     a = ar / TR
